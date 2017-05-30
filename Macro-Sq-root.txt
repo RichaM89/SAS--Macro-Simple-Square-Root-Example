@@ -1,0 +1,13 @@
+%let start=1;
+%let end=5;
+
+data sqrt_table;
+do n= &start to &end;
+Sqrt_n= sqrt(n);
+output;
+end;
+run;
+
+title "Square Root Table from &start to &end";
+proc print data=sqrt_table noobs;
+run;
